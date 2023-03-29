@@ -32,7 +32,7 @@ export class LoginUserComponent implements OnInit {
     this.loginService.autenticatedUser(user).subscribe({
       next: (data: any) => {
         this.loginService.sucessLogin(data.token);
-        this.router.navigate(['/control-panel']);
+        this.router.navigate(['/home']);
       },
       error: (err) => {
         console.log('ERR LOGIN', err);
@@ -42,5 +42,8 @@ export class LoginUserComponent implements OnInit {
     });
   }
 
+  get loginRequest() {
+    return this.login.controls;
+  }
 
 }

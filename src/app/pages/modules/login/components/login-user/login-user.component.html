@@ -1,1 +1,31 @@
-<p>login-user works!</p>
+<div class="container p-2">
+  <div class="box-title">
+    <!-- <img class="logo" src="../.../../../../../assets/images/logo.svg" alt=""> -->
+    <p class="text-center title">Login</p>
+  </div>
+  <div class="d-flex flex-column align-items-center form-login">
+    <form class="example-form" [formGroup]="login">
+      <mat-form-field class="example-full-width w-100" appearance="outline">
+        <mat-label>E-mail</mat-label>
+        <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
+        <mat-error *ngIf="(loginRequest['login']?.touched || loginRequest['login']?.dirty) && loginRequest['login']?.errors?.['required']">Este campo é obrigatório</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width pb-0 w-100" appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input type="password" matInput [type]="hide ? 'password' : 'text'" placeholder="Senha" formControlName="password">
+        <mat-error *ngIf="(loginRequest['password']?.touched || loginRequest['password']?.dirty) && loginRequest['password']?.errors?.['required']">Este campo é obrigatório</mat-error>
+        <button mat-icon-button type="button" class="btn-green" matSuffix (click)="hide = !hide; $event.preventDefault();" [attr.aria-label]="'Mostrar senha'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      </mat-form-field>
+      <div class="px-4">
+        <button class="w-100 mt-4" (click)="authLogin(login.value)" mat-raised-button color="primary">Login</button>
+        <!-- <button class="w-100 my-2" routerLink="/cadastro" mat-stroked-button color="warn">Cadastrar</button> -->
+      </div>
+      <div class="text-center">
+        Esqueceu a senha? <a routerLink="/forgot" class="text-end">Clique aqui!</a>
+      </div>
+    </form>
+  </div>
+</div>
