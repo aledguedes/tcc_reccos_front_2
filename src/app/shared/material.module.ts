@@ -46,9 +46,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { NavbarComponent } from '../components/navbar/navbar.component';
-import { SidebarComponent } from '../components/sidebar/sidebar.component';
-import { FooterComponent } from '../components/footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const modules = [
   A11yModule,
@@ -100,8 +98,6 @@ const modules = [
 
 @NgModule({
   declarations: [
-    NavbarComponent,
-    SidebarComponent,
     FooterComponent
   ],
   imports: [
@@ -111,8 +107,6 @@ const modules = [
   exports: [
     FormsModule,
     ReactiveFormsModule,
-    NavbarComponent,
-    SidebarComponent,
     FooterComponent,
     ...modules
   ],
