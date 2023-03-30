@@ -1,4 +1,4 @@
-<mat-nav-list>
+<mat-nav-list class="w-100">
   <mat-card class="example-card">
     <div class="profile-card">
       <div class="d-flex justify-content-center">
@@ -12,10 +12,23 @@
 
     <mat-divider></mat-divider>
 
-    <h2 matSubheader>Pages</h2>
+    <div class="accordion-menu my-3">
+      <ul>
+        <li>
+          <input type="checkbox" checked>
+          <i class="arrow"></i>
+          <h2><i class="fas fa-code"></i>Languages Used</h2>
+          <p>This UI was written in HTML and CSS.
+          </p>
+        </li>
+        <li>
+      </ul>
+    </div>
+
+    <!-- <h2 matSubheader>Pages</h2>
 
     <a mat-list-item (click)="toHome()">HOME</a>
-    <a mat-list-item (click)="toTeams()">Times</a>
+    <a mat-list-item (click)="toTeams()">Times</a> -->
     <mat-card-content>
     </mat-card-content>
   </mat-card>

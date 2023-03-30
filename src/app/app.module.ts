@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './shared/material.module';
 import { NavbarModule } from './shared/components/navbar/navbar.module';
 import { SidebarModule } from './shared/components/sidebar/sidebar.module';
+import { DefaultModule } from './default/default.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,12 @@ import { SidebarModule } from './shared/components/sidebar/sidebar.module';
     LoginModule,
     MaterialModule
   ],
-  providers: [],
+  exports: [
+    DefaultModule
+  ],
+  providers: [
+    DefaultModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
