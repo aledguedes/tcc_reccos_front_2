@@ -9,7 +9,6 @@ const routes: Routes = [
   {
     path: '', component: DefaultComponent, children: [
       { path: '', component: LeagueInitComponent },
-      { path: 'teams', component: LeagueHeadComponent },
     ]
   }
 ];
