@@ -1,0 +1,18 @@
+.box-title {
+  width: 100%;
+
+  .logo {
+    margin: 1rem 0;
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .screen-sm {
+    margin: 1rem 0;
+  }
+}
+
+.example-form {
+  font-size: 12px;
+}

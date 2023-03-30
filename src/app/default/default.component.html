@@ -1,10 +1,10 @@
-<app-navbar></app-navbar>
+<app-navbar (toggleSidebarForMe)="toggleSidebar($event)"></app-navbar>
+
 <mat-drawer-container class="example-container">
-    <mat-drawer class="aside-left" mode="side" opened>
+    <mat-drawer class="aside-left" mode="side" [opened]="sidebarOpen">
         <app-sidebar></app-sidebar>
     </mat-drawer>
     <mat-drawer-content>
-        oi
         <router-outlet></router-outlet>
     </mat-drawer-content>
 </mat-drawer-container>

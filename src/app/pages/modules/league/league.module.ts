@@ -1,19 +1,23 @@
+import { DefaultModule } from './../../../default/default.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { LeagueRoutingModule } from './league-routing.module';
-import { LeagueHeadComponent } from './league-head/league-head.component';
+import { LeagueHeadComponent } from './components/league-head/league-head.component';
 import { MaterialModule } from 'src/app/shared/material.module';
+import { LeagueInitComponent } from './components/league-init/league-init.component';
 
 
 @NgModule({
   declarations: [
-    LeagueHeadComponent
+    LeagueHeadComponent,
+    LeagueInitComponent
   ],
   imports: [
     CommonModule,
     LeagueRoutingModule,
-    MaterialModule
+    MaterialModule,
+    DefaultModule
   ]
 })
 export class LeagueModule { }

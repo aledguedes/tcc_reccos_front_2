@@ -1,3 +1,4 @@
+import { LoginModule } from './pages/modules/login/login.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -20,6 +21,7 @@ import { SidebarModule } from './shared/components/sidebar/sidebar.module';
     HttpClientModule,
     NavbarModule,
     SidebarModule,
+    LoginModule,
     MaterialModule
   ],
   providers: [],
