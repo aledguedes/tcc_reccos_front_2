@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,9 +10,20 @@ export class SidebarComponent implements OnInit {
 
   panelOpenState: boolean = false;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  toHome() {
+    this.router.navigate(['/home']);
+  }
+
+  toTeams() {
+    console.log('teams')
+    this.router.navigate(['/teams']);
   }
 
 }

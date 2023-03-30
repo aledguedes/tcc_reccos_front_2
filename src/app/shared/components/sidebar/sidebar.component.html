@@ -14,10 +14,9 @@
 
     <h2 matSubheader>Pages</h2>
 
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Home</a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="teams">Times</a>
+    <a mat-list-item (click)="toHome()">HOME</a>
+    <a mat-list-item (click)="toTeams()">Times</a>
     <mat-card-content>
-      bla
     </mat-card-content>
   </mat-card>
 

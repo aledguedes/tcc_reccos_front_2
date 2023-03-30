@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren: () => import('./default/default.module').then(m => m.DefaultModule)
   },
   {
-    path: 'league',
+    path: 'leagues',
     loadChildren: () => import ('./pages/modules/league/league.module').then(m => m.LeagueModule)
   },
   {
