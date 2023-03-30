@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="box-title">
+    <p class="text-center title">Resetar senha</p>
+  </div>
+  <div class="col-lg-12">
+    <form class="example-form" [formGroup]="login">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Informe o e-mail cadastrado no sistema</mat-label>
+        <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
+        <!-- <mat-error *ngIf="(loginRequest['login']?.touched || loginRequest['login']?.dirty) && loginRequest['login']?.errors?.['required']">Este campo é obrigatório</mat-error> -->
+      </mat-form-field>
+      <div class="d-flex justify-content-end">
+        <button class="me-2 w-25" routerLink="/" mat-stroked-button color="warn">Voltar</button>
+        <button class="w-25" routerLink="/" mat-raised-button color="primary">Enviar</button>
+      </div>
+    </form>
+  </div>
+</div>

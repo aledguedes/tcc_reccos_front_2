@@ -1,1 +1,167 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color1: #1F187A;
+    --color2: #0049A7;
+    --color3: #0071C1;
+    --color4: #0097CA;
+    --color5: #00BCC6;
+    --color6: #2DDEBF;
+
+    --second1: #5E5080;
+    --secont2: #AFA8BA;
+    --second3: #7A7485;
+    --second4: #6E0000;
+    --second5: #AA2120;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #adaaaa2a;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2 {
+    color: #444;
+}
+
+
+/* resets*/
+
+dl,
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.element-top {
+    margin-top: 20%;
+}
+
+.title {
+    font-size: 30px;
+    color: #D94B54;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.rs-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #D94B54;
+    text-transform: uppercase;
+}
+
+.title-card {
+    font-size: 16px;
+    font-weight: 700;
+    color: #D94B54;
+}
+
+.box {
+    // background-color: #FFF;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.bg-primary-gradient {
+    background-image: linear-gradient(to right top, #1f187a, #34267c, #44347d, #52427f, #5e5080);
+}
+
+form {
+    font-size: 13px;
+}
+
+.mat-flat-button.mat-primary,
+.mat-raised-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+    background-color: #3f51b5;
+    height: 33px !important;
+    align-items: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    // font-size: 13px;
+}
+
+.mat-flat-button.mat-warn,
+.mat-raised-button.mat-warn,
+.mat-fab.mat-warn,
+.mat-mini-fab.mat-warn {
+    height: 33px !important;
+    align-items: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    // font-size: 13px;
+}
+
+.success {
+    background: #19a64a;
+    color: #fff;
+}
+
+.success button {
+    background-color: #19a64a;
+    color: white;
+    border: none;
+}
+
+.error {
+    background: #F44336;
+    color: #fff;
+}
+
+.error button {
+    background-color: #F44336;
+    color: white !important;
+    border: none;
+}
+
+$statusColors: (
+    "false": #E00E0E,
+    "true": #1DB954,
+);
+
+@each $name,
+$color in $statusColors {
+    .status-#{$name} {
+        position: relative;
+
+        &:after {
+            content: "";
+            width: 3px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #{$color};
+        }
+    }
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: #0049938f !important;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: #004993 !important;
+}
+
+.form {
+  font-size: 12px;
+}
