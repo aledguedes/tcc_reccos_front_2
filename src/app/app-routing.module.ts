@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'league',
     loadChildren: () => import ('./pages/modules/league/league.module').then(m => m.LeagueModule)
+  },
+  {
+    path: 'teams',
+    loadChildren: () => import('./pages/modules/team/team.module').then(m => m.TeamModule)
   }
 ];
 
