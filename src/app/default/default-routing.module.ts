@@ -1,3 +1,4 @@
+import { TeamInitComponent } from './../pages/modules/team/components/team-init/team-init.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DefaultComponent } from './default.component';
@@ -9,6 +10,7 @@ const routes: Routes = [
   {
     path: '', component: DefaultComponent, children: [
       { path: '', component: LeagueInitComponent },
+      { path:'teams', component: TeamInitComponent }
     ]
   }
 ];

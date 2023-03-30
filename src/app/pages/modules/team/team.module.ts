@@ -1,3 +1,5 @@
+import { NavbarComponent } from './../../../shared/components/navbar/navbar.component';
+import { SidebarComponent } from './../../../shared/components/sidebar/sidebar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DefaultModule } from './../../../default/default.module';
@@ -17,7 +19,7 @@ import { TeamInitComponent } from './components/team-init/team-init.component';
     CommonModule,
     TeamRoutingModule,
     MaterialModule,
-    DefaultModule
+
   ]
 })
 export class TeamModule { }

@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'teams', component: TeamInitComponent, children: [
+    path: '', component: TeamInitComponent, children: [
       { path: '', component: TeamHeadComponent },
     ]
   }
